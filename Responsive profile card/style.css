@@ -78,5 +78,8 @@ body {
 
 .stat small {
 	color: hsl(227, 10%, 46%);
-	margin: 0 auto;
+}
+
+.stat h3 {
+	margin-bottom:5px;
 }
