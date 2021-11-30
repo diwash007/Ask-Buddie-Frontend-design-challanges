@@ -1,0 +1,174 @@
+:root {
+    --clr: #ce3d31;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-shadow: 2px 2px green;
+    animation: mymove 1s infinite;
+    font-weight: bold;
+}
+
+@keyframes mymove {
+  50% {text-shadow: 2px 2px 10px blue;}
+}
+
+nav {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--clr);
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    right: 0px;
+}
+
+nav ul li {
+    margin: 0 1.5rem;
+}
+
+nav a:hover {
+    color: yellow;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: larger;
+    margin-left: 1.5rem;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.hero {
+    background-image: url('assets/images/hero.jpg');
+    height: 500px;
+    background-size: cover;
+    margin: 10px 0px;
+    width: 100%;
+}
+
+h1 {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.features div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 200px;
+    height: 300px;
+    box-shadow: 0px 0px 2px 0px;
+    padding: 10px;
+    border-radius: 5%;
+}
+
+.features div:hover {
+    animation: shadow 3s infinite;
+}
+
+@keyframes shadow {
+    0%   {box-shadow: 2px 2px 10px red;}
+    25%  {box-shadow: 2px 2px 10px green;}
+    50%  {box-shadow: 2px 2px 10px orange;}
+    75%  {box-shadow: 2px 2px 10px blue;}
+    100% {box-shadow: 2px 2px 10px red;}
+}
+
+.features img {
+    height: 100px;
+    width: 100px;
+}
+
+.msg {
+    padding: 0px 100px;
+}
+.creator-img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    animation: shadow 5s infinite;
+    animation-direction: alternate;
+}
+
+.creator {
+    color: var(--clr);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer {
+    background: var(--clr);
+    color: white;
+    margin-top: 100px;
+    padding: 30px;
+}
+
+footer a {
+    color: yellow;
+}
+
+.copyright {
+    text-align: center;
+}
+
+.social-img {
+    height: 50px;
+}
+
+
+@media screen and (max-width:767px) {
+    nav ul {
+        display: block;
+    }
+
+    .features {
+        display: block;
+    }
+
+    .features div {
+        margin: 20px auto;
+    }
+
+    .creator {
+        display: block;
+    }
+
+    .msg {
+        padding: 0px 0px;
+        text-align: center;
+    }
+
+    .footer {
+        display: block;
+    }
+}
