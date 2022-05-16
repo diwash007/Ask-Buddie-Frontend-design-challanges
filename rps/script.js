@@ -15,22 +15,19 @@ printResult = (p, c) => {
 
 let player = 0;
 let computer = 0;
-let gameOver = false;
 let buttons = document.querySelectorAll("button");
 let scoreDiv = document.getElementById("score");
 
-if (gameOver != true) {
-  buttons.forEach((button) => {
-    button.addEventListener("click", () => {
-      let playerSelection = button.innerHTML;
-      let computerSelection = ["R", "P", "S"][Math.floor(Math.random() * 3)];
-      scoreDiv.innerHTML = "Player: " + playerSelection + "\t Computer: " + computerSelection;
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    let playerSelection = button.innerHTML;
+    let computerSelection = ["R", "P", "S"][Math.floor(Math.random() * 3)];
+    scoreDiv.innerHTML = "Player: " + playerSelection + "\t Computer: " + computerSelection;
 
-      let result = roundResult(playerSelection, computerSelection);
-      if (result === "win") player++;
-      else if (result === "lose") computer++;
+    let result = roundResult(playerSelection, computerSelection);
+    if (result === "win") player++;
+    else if (result === "lose") computer++;
 
-      printResult(player, computer);
-    });
+    printResult(player, computer);
   });
-}
+});
